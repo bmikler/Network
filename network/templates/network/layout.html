@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Social Network{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'network/styles.css' %}" rel="stylesheet">
+        <script id="user_id_secure" type="application/json">{{ user.id }}</script>
+        <script src="static/network/index.js"></script>
+        
+    </head>
+    <body>
+        <div class="logo">
+            <h1>network.CS50</h1>
+        </div>
+        
+        <div class="row">
+            <div class="sidebar"> 
+                {% if user.is_authenticated %}
+                    <div class="nav-item">
+                        <a class="nav-link" id="button-user" data-user="{{ user.id }}"><strong>Profile</strong></a>
+                    </div> 
+                    <div class="nav-item">
+                        <a class="nav-link" id="button-new-post">New post</a>
+                    </div>   
+                    <div class="nav-item">
+                        <a class="nav-link"  id="button-all-posts">All Posts</a>
+                    </div> 
+                    <div class="nav-item">
+                        <a class="nav-link" id="button-following">Following</a>
+                    </div> 
+                    <div class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                    </div> 
+                {% else %}
+                    <div class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Log In</a>
+                    </div> 
+                    <div class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </div> 
+                {% endif %}
+            </div>
+        
+        <div class="body">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+    </body>
+</html>

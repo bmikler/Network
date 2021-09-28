@@ -1,0 +1,166 @@
+.logo{
+    color: white;
+    background-color: rgb(12, 94, 89);
+    padding: 30px;
+    width: 100vw;
+}
+
+.body{
+    width: 80%;
+}
+
+
+.row{
+    height: 100%;
+}
+
+.sidebar{
+    background-color: rgb(255, 255, 255);
+    width: 15%;
+    min-width: fit-content;
+    font-size: large;
+
+}
+
+.sidebar a{
+    padding:20px;
+    margin-left: 20px;
+}
+
+.sidebar div:hover, .sidebar div:hover > *{
+    background-color: rgb(12, 94, 89);
+    color: white;
+}
+
+body{
+    background-color: rgb(187, 209, 208);
+    height: 100vh;
+    position: relative;
+}
+
+
+textarea{
+    resize: none;
+    width: 50vw;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+}
+
+.post textarea{
+    width: 95%;
+    height: fit-content;
+    border: none;
+    color: black;
+    padding: 5px;
+}
+
+.post{
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    width: 50vw;
+    margin: 10px;
+}
+
+.page-body{
+    margin:auto;
+    width: fit-content;
+}
+
+.post-timestamp{
+    color: grey;
+    font-size: smaller;
+}
+
+.post-likes{
+    border-bottom: 1px solid #ccc;
+}
+
+#editButton{
+    top: 20px;
+    right: 20px;
+    position: absolute;
+     
+}
+
+#likeButton{
+    margin-top: 10px;
+}
+
+#saveButton{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+}
+
+#editButton button{
+    color: gray;
+    border: none;
+    background: none;
+
+}
+
+#editButton button:hover{
+    color: darkgray;
+}
+
+#pagination-buttons {
+    cursor: pointer;
+}
+ 
+#button-user, #button-new-post, #button-all-posts, #button-following{
+    cursor: pointer;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.login{
+
+    width: 60vw;
+    margin: auto;
+}
+
+.login > *{
+    padding: 20px;
+}
+
+#profile-picture{
+    
+    width:100x;
+    height: 100px;
+    border-radius: 50px;
+
+}
+
+#profile-view{
+    background-color: rgb(12, 94, 89);
+    color: white;
+    font-weight: bolder;
+    padding: 20px;
+    width: 80vw;
+    margin:auto;
+    border-radius: 10px;
+    margin:20px;
+    text-align: center;
+}
+
+#profile-followers{
+    margin-right: 20px;
+}
+
+#profile-button{
+    margin:20px;
+}
+
+#newPostButton{
+    text-align: center;
+}

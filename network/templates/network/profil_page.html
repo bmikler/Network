@@ -1,0 +1,35 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+{% if user.is_authenticated %}
+
+<div>
+    <h3> {{ user.username }} </h3>
+</div>
+
+<div>
+    Followings:
+    {% for following in user_followings %}
+    {{ following }}
+    {% endfor %}
+</div>
+
+<div>
+    Followers:
+    {% for follower in user_followers %}
+    {{ follower.user}}
+    {% endfor %}
+
+</div>
+
+<div>
+    <button>Fallow
+    </button>
+</div>
+
+<div id="post-view"></div>
+
+{% endif %}
+
+{% endblock %}

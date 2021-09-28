@@ -1,0 +1,39 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+{% if user.is_authenticated %}
+
+<div id="profile-view">
+    <div><img id="profile-picture" src="static/network/user.jpg"></div>
+    <div id="profile-username"><span id="username"></span></div>
+    <span id="profile-followers">Followers: <span id="followers"></span></span>
+    <span id="profile-followings">Followings: <span id="followings"></span></span>
+
+    <div id="profile-button"></div>
+</div>
+
+<div class="page-body">
+
+    
+
+    <div id="new-post-view">
+        <form id="new-post-form">
+            <div>
+                <textarea id="new-post-text" placeholder="Write Your post..."></textarea>
+            </div>
+            <input class="btn-outline-primary" id="#newPostButton" type="submit" value="Send">             
+        </form>
+    </div>
+
+    <div id="post-view"></div>
+    <div id="pagination-view">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center" id="pagination-buttons"></ul>
+        </nav>
+    </div>
+</div>
+
+{% endif %}
+
+{% endblock %}
