@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn cs50network.wsgi --log-file=-
+web: gunicorn networkcs50.wsgi --log-file=-
